@@ -34,7 +34,7 @@
 "source_data/model_features/features_gte_blip_caption_92.npy","376960","030bb77b74eb3f28ec06954a9da0934b8cdd16ac5b148a04d3a0146e0e026e72"
 "source_data/model_features/features_gte_published_category_92.npy","376960","72bc2696af35bad53b174ee2fa34c47fd4646b4f6e9982a9bbf246d59a57d74b"
 "source_data/model_features/features_siglip_base_image_92.npy","282752","217f071b81d840a6243a1b0842ccd9976e4c7c7b75070db28e7e53759f5b43bb"
-"source_data/README.md","625","6b3485a51963076f9a6dfdedeffc082b8ee7a1a1b70bbaab08d84a60afc0e67f"
+"source_data/README.md","635","6cb33c7854b61ea3167a8a2b9fd926532d6edca8a61dd58e5dfb7ee5d1665b2c"
 "source_data/supplementary/adapter_baselines.npz","6090","e9af7a15464105a78669dda48391c74341484206b6ecd98fe0d39d7600105d0f"
 "source_data/supplementary/adapter_stability.npz","3913","6102314635f9c0a27bc3f89d6df52f7a0eb1eb67e97b59a923344afe44c1dcd8"
 "source_data/supplementary/core_rsa_robustness.npz","1058590","623040e6c8437d4fab3475c4b1052e77c79b408eb69cdc224c22f519fce78048"
