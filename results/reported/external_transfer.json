@@ -1,0 +1,382 @@
+{
+  "analysis": "late EEG-MEG consensus adapter external transfer",
+  "decision": "SOURCE_SUPPORTED_EXTERNAL_LIMITED",
+  "input_audit": {
+    "status": "STAGE2_INPUT_CHECK_PASSED",
+    "stage1_decision": "GO_STAGE2_EXTERNAL",
+    "confirmation_concepts": 183,
+    "dino_shape": [
+      884,
+      10,
+      384
+    ],
+    "things_participants": 8,
+    "alljoined_participants": 20,
+    "nod_feature_shape": [
+      55761,
+      384
+    ],
+    "nod_trial_rows": 56000,
+    "nod_subjects": 19,
+    "nod_cache_post_shape": [
+      19,
+      499500
+    ],
+    "nod_cache_pre_shape": [
+      19,
+      499500
+    ],
+    "source_models": {
+      "seeds": [
+        20260722,
+        20260723,
+        20260724
+      ],
+      "epochs": 400,
+      "lambda_anchor": 100.0
+    },
+    "hashes": {
+      "stage1": "ac133cbd37356a3891e5ee998dec737a16c66266d755663466cfac1b15a3fd15",
+      "amendment": "1b66c6611bf8c1e005d162fa8d4fbb450dc616ffcab7648bee45e3764d67b413",
+      "script": "c16799c1b0638b629afc11de707d678975d437b6610ba10a87f13e9dfab552af",
+      "nod_feature_audit": "14aa2dbdad8d181461717e48b4fb6424353944e1686107a22a859231de8013dc",
+      "nod_cache": "2fdaa5fa66ff07be99948ab85338024bbed2057884dfd7864288d6d402b6d246"
+    }
+  },
+  "things_eeg": {
+    "mean": 0.005010041653577793,
+    "median": 0.0053382283000010244,
+    "positive_n": 8,
+    "n": 8,
+    "exact_two_sided_signflip_p": 0.0078125,
+    "bootstrap_mean_95ci": [
+      0.0033479628910047365,
+      0.006676102649775312
+    ],
+    "values": [
+      0.0016379406956692696,
+      0.0038559633716161446,
+      0.007018639045985778,
+      0.0027631478510233842,
+      0.002527594444853981,
+      0.006820493228385904,
+      0.007769548993759617,
+      0.007687005597328267
+    ]
+  },
+  "alljoined_eeg": {
+    "mean": 0.005171211541017474,
+    "median": 0.004609245138121305,
+    "positive_n": 17,
+    "n": 20,
+    "exact_two_sided_signflip_p": 3.0517578125e-05,
+    "bootstrap_mean_95ci": [
+      0.003227299240604246,
+      0.0072978234901346336
+    ],
+    "values": [
+      0.005745723205480505,
+      0.01908328458602703,
+      0.006532149412617802,
+      0.0043182252506135665,
+      -1.1181908204475899e-05,
+      0.009160648382752356,
+      0.0019333862927727007,
+      0.00041600208540632346,
+      -0.000543573671206412,
+      0.0005139760747204271,
+      0.009518029091169583,
+      0.01073944026212523,
+      0.00619179242110365,
+      0.006955684939714983,
+      -0.0003161625239000605,
+      0.004864464217157003,
+      0.0043240636049692235,
+      0.008076479481411969,
+      0.0015677735565324776,
+      0.004354026059085607
+    ]
+  },
+  "human_similarity": {
+    "frozen_rho": 0.4243151767335136,
+    "adapted_rho": 0.4341775829715832,
+    "gain": 0.00986240623806961,
+    "label_permutation": {
+      "n": 9999,
+      "seed": 20260806,
+      "null_mean": -6.822229887318428e-05,
+      "null_sd": 0.0032292732653306376,
+      "null_95th": 0.0051639934376634805,
+      "one_sided_p": 0.0012
+    },
+    "status": "convergent descriptive endpoint, not an external neural gate"
+  },
+  "nod": {
+    "poststimulus": {
+      "mean": 0.004613223893778912,
+      "median": 0.004008918159272269,
+      "positive_n": 19,
+      "n": 19,
+      "exact_two_sided_signflip_p": 3.814697265625e-06,
+      "bootstrap_mean_95ci": [
+        0.0035382820864454786,
+        0.005836535840907617
+      ],
+      "values": [
+        0.005775957767755392,
+        0.006611059418852233,
+        0.01226772100875681,
+        0.0018919195741777806,
+        0.0025614932449192773,
+        0.0012503128224057442,
+        0.0036263947357163106,
+        0.006500205381180972,
+        0.00590516280939922,
+        0.0019063750261945397,
+        0.004008918159272269,
+        0.005366042941839762,
+        0.0036635405485786615,
+        0.0027457265553895646,
+        0.0021040665628361405,
+        0.0024374493716324414,
+        0.006188954000808395,
+        0.006153742075667545,
+        0.006686211976416268
+      ]
+    },
+    "prestimulus": {
+      "mean": -2.2816577789320278e-05,
+      "median": 2.2189374764421313e-05,
+      "positive_n": 10,
+      "n": 19,
+      "exact_two_sided_signflip_p": 0.6496353149414062,
+      "bootstrap_mean_95ci": [
+        -0.00011729528982864219,
+        6.941043161305286e-05
+      ],
+      "values": [
+        -3.3046469855814556e-05,
+        -0.00027627360818526653,
+        -0.00040103899376591357,
+        -0.00022395884360870222,
+        0.00047467995692626174,
+        -1.5912023867828374e-05,
+        0.0001091835724628012,
+        -2.9322795746218946e-05,
+        9.884580875325506e-05,
+        -0.0001535113086995562,
+        0.00013411625916181241,
+        8.002693520998733e-05,
+        -0.00038919252678023793,
+        -0.00022749809176183047,
+        0.00017521452192165241,
+        9.799872864251394e-05,
+        2.633457464665148e-05,
+        9.76499517849267e-05,
+        2.2189374764421313e-05
+      ],
+      "exact_one_sided_positive_signflip_p": 0.6751842498779297
+    },
+    "post_minus_prestimulus": {
+      "mean": 0.004636040471568232,
+      "median": 0.004052733075358899,
+      "positive_n": 19,
+      "n": 19,
+      "exact_two_sided_signflip_p": 3.814697265625e-06,
+      "bootstrap_mean_95ci": [
+        0.003526839441982645,
+        0.005924653778281188
+      ],
+      "values": [
+        0.005809004237611207,
+        0.0068873330270375,
+        0.012668760002522723,
+        0.0021158784177864828,
+        0.0020868132879930156,
+        0.0012662248462735725,
+        0.0035172111632535094,
+        0.006529528176927191,
+        0.005806317000645965,
+        0.002059886334894096,
+        0.003874801900110457,
+        0.005286016006629775,
+        0.004052733075358899,
+        0.002973224647151395,
+        0.001928852040914488,
+        0.0023394506429899272,
+        0.006162619426161743,
+        0.0060560921238826185,
+        0.006664022601651847
+      ]
+    },
+    "geometry_preservation_mean": 0.9884818267562023,
+    "participants": [
+      {
+        "subject": "sub-01",
+        "post_gain": 0.005775957767755392,
+        "prestimulus_gain": -3.3046469855814556e-05,
+        "geometry_preservation": 0.9908431053514918,
+        "base_post_rho": 0.024674630859726713,
+        "adapted_post_rho": 0.030450588627482105
+      },
+      {
+        "subject": "sub-02",
+        "post_gain": 0.006611059418852233,
+        "prestimulus_gain": -0.00027627360818526653,
+        "geometry_preservation": 0.9907891269257413,
+        "base_post_rho": 0.07281485482678687,
+        "adapted_post_rho": 0.0794259142456391
+      },
+      {
+        "subject": "sub-03",
+        "post_gain": 0.01226772100875681,
+        "prestimulus_gain": -0.00040103899376591357,
+        "geometry_preservation": 0.9902240514283954,
+        "base_post_rho": 0.056300511344641924,
+        "adapted_post_rho": 0.06856823235339873
+      },
+      {
+        "subject": "sub-04",
+        "post_gain": 0.0018919195741777806,
+        "prestimulus_gain": -0.00022395884360870222,
+        "geometry_preservation": 0.9895797681576817,
+        "base_post_rho": 0.06568270269076575,
+        "adapted_post_rho": 0.06757462226494353
+      },
+      {
+        "subject": "sub-05",
+        "post_gain": 0.0025614932449192773,
+        "prestimulus_gain": 0.00047467995692626174,
+        "geometry_preservation": 0.9898525856307373,
+        "base_post_rho": 0.0266654081934092,
+        "adapted_post_rho": 0.029226901438328477
+      },
+      {
+        "subject": "sub-06",
+        "post_gain": 0.0012503128224057442,
+        "prestimulus_gain": -1.5912023867828374e-05,
+        "geometry_preservation": 0.9908765862243142,
+        "base_post_rho": 0.06477561106247443,
+        "adapted_post_rho": 0.06602592388488017
+      },
+      {
+        "subject": "sub-07",
+        "post_gain": 0.0036263947357163106,
+        "prestimulus_gain": 0.0001091835724628012,
+        "geometry_preservation": 0.9907609381401881,
+        "base_post_rho": 0.013520457985278974,
+        "adapted_post_rho": 0.017146852720995285
+      },
+      {
+        "subject": "sub-08",
+        "post_gain": 0.006500205381180972,
+        "prestimulus_gain": -2.9322795746218946e-05,
+        "geometry_preservation": 0.9909437979148662,
+        "base_post_rho": 0.014080395180402506,
+        "adapted_post_rho": 0.02058060056158348
+      },
+      {
+        "subject": "sub-09",
+        "post_gain": 0.00590516280939922,
+        "prestimulus_gain": 9.884580875325506e-05,
+        "geometry_preservation": 0.9911519320904802,
+        "base_post_rho": 0.0547351093054427,
+        "adapted_post_rho": 0.06064027211484192
+      },
+      {
+        "subject": "sub-10",
+        "post_gain": 0.0019063750261945397,
+        "prestimulus_gain": -0.0001535113086995562,
+        "geometry_preservation": 0.9879383037450225,
+        "base_post_rho": -0.012024256278148213,
+        "adapted_post_rho": -0.010117881251953674
+      },
+      {
+        "subject": "sub-11",
+        "post_gain": 0.004008918159272269,
+        "prestimulus_gain": 0.00013411625916181241,
+        "geometry_preservation": 0.9861259917585553,
+        "base_post_rho": 0.025028479375797615,
+        "adapted_post_rho": 0.029037397535069884
+      },
+      {
+        "subject": "sub-12",
+        "post_gain": 0.005366042941839762,
+        "prestimulus_gain": 8.002693520998733e-05,
+        "geometry_preservation": 0.9867980428926924,
+        "base_post_rho": -0.015529217632348696,
+        "adapted_post_rho": -0.010163174690508934
+      },
+      {
+        "subject": "sub-13",
+        "post_gain": 0.0036635405485786615,
+        "prestimulus_gain": -0.00038919252678023793,
+        "geometry_preservation": 0.9862182384786654,
+        "base_post_rho": 0.039375130236694866,
+        "adapted_post_rho": 0.04303867078527353
+      },
+      {
+        "subject": "sub-14",
+        "post_gain": 0.0027457265553895646,
+        "prestimulus_gain": -0.00022749809176183047,
+        "geometry_preservation": 0.9865676495978333,
+        "base_post_rho": 0.011197788674135565,
+        "adapted_post_rho": 0.01394351522952513
+      },
+      {
+        "subject": "sub-24",
+        "post_gain": 0.0021040665628361405,
+        "prestimulus_gain": 0.00017521452192165241,
+        "geometry_preservation": 0.9868228763243917,
+        "base_post_rho": -0.002407791675421597,
+        "adapted_post_rho": -0.0003037251125854564
+      },
+      {
+        "subject": "sub-26",
+        "post_gain": 0.0024374493716324414,
+        "prestimulus_gain": 9.799872864251394e-05,
+        "geometry_preservation": 0.9864523378775882,
+        "base_post_rho": 0.012931483908403228,
+        "adapted_post_rho": 0.01536893328003567
+      },
+      {
+        "subject": "sub-27",
+        "post_gain": 0.006188954000808395,
+        "prestimulus_gain": 2.633457464665148e-05,
+        "geometry_preservation": 0.9857234179604759,
+        "base_post_rho": 0.011130341187364556,
+        "adapted_post_rho": 0.01731929518817295
+      },
+      {
+        "subject": "sub-29",
+        "post_gain": 0.006153742075667545,
+        "prestimulus_gain": 9.76499517849267e-05,
+        "geometry_preservation": 0.9854624574842532,
+        "base_post_rho": 0.050976439503013074,
+        "adapted_post_rho": 0.05713018157868062
+      },
+      {
+        "subject": "sub-30",
+        "post_gain": 0.006686211976416268,
+        "prestimulus_gain": 2.2189374764421313e-05,
+        "geometry_preservation": 0.9880235003844672,
+        "base_post_rho": -0.01680757080482212,
+        "adapted_post_rho": -0.010121358828405851
+      }
+    ]
+  },
+  "things_geometry_preservation": 0.9905752809647694,
+  "gates": {
+    "E1_things_eeg": true,
+    "E2_alljoined_eeg": true,
+    "E3_nod_poststimulus": false,
+    "E4_nod_temporal_specificity": false,
+    "E5_geometry_preservation": true
+  },
+  "hashes": {
+    "amendment": "1b66c6611bf8c1e005d162fa8d4fbb450dc616ffcab7648bee45e3764d67b413",
+    "script": "c16799c1b0638b629afc11de707d678975d437b6610ba10a87f13e9dfab552af",
+    "stage1": "ac133cbd37356a3891e5ee998dec737a16c66266d755663466cfac1b15a3fd15",
+    "nod_cache": "2fdaa5fa66ff07be99948ab85338024bbed2057884dfd7864288d6d402b6d246"
+  }
+}

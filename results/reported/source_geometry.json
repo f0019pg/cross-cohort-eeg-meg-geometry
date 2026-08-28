@@ -1,0 +1,365 @@
+{
+  "analysis": "prospectively locked late EEG-MEG shared relational geometry source gate",
+  "decision": "GO_STAGE1_ADAPTER",
+  "input_audit": {
+    "status": "INPUT_CHECK_PASSED",
+    "root": ".",
+    "eeg_dir": "${KANESHIRO_EEG_DIR}",
+    "meg_file": "${CICHY_MEG_FILE}",
+    "eeg_participants": 10,
+    "meg_participants": 16,
+    "images": 72,
+    "category_names": [
+      "human bodypart",
+      "human face",
+      "nonhuman bodypart",
+      "nonhuman face",
+      "natural inanimate",
+      "artificial inanimate"
+    ],
+    "category_counts": [
+      12,
+      12,
+      12,
+      12,
+      12,
+      12
+    ],
+    "cichy_indices_unique": 72,
+    "dino_shape": [
+      72,
+      384
+    ],
+    "meg_shape": [
+      92,
+      92,
+      1301,
+      2,
+      16
+    ],
+    "hashes": {
+      "protocol": "1aa1219f2a6f28c10472bdd558e22e32a72ea885ace976b18df5b6b88f8d6334",
+      "mapping": "6b0d89002ddb2cc80c947aaba1a403480ac4f338233af30a5eba4742dc963a08",
+      "dino": "17261cadd40f173defe59764a711b5e5f712dae5c4b5fcc04656938d62612561",
+      "script": "fb0ca5f93c50e490b971861517603157a1d922d6d8ee038064f54cc949689476"
+    }
+  },
+  "windows_ms": {
+    "eeg_late": [
+      192,
+      320
+    ],
+    "meg_late": [
+      180,
+      300
+    ],
+    "meg_pre": [
+      -100,
+      -1
+    ]
+  },
+  "controls": "rank(DINOv3 distance) + complete six-category pair-type dummy design",
+  "crossmodal_teacher": {
+    "eeg_teacher_participants": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "eeg_evaluation_participants": "independent MEG participants 1-16",
+    "meg_teacher_participants": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "meg_evaluation_participants": "independent EEG participants 1-10",
+    "direct_crossmodal_teacher_rho": 0.2990314866779863,
+    "direct_crossmodal_teacher_within_category_rho": 0.3246111230054347
+  },
+  "reliability": {
+    "eeg": {
+      "mean": 0.5351525309130989,
+      "median": 0.5596956746506004,
+      "positive_n": 10,
+      "n": 10,
+      "exact_two_sided_signflip_p": 0.001953125,
+      "bootstrap_mean_95ci": [
+        0.45731404961700634,
+        0.6005405457713108
+      ],
+      "values": [
+        0.6267371015441612,
+        0.4112921888750496,
+        0.5989819416442402,
+        0.5010038667062008,
+        0.6001944870768228,
+        0.6893310741529373,
+        0.5450587906069339,
+        0.2595345092234422,
+        0.5467810317366237,
+        0.5726103175645771
+      ]
+    },
+    "meg": {
+      "mean": 0.31538592725005304,
+      "median": 0.324672200849058,
+      "positive_n": 16,
+      "n": 16,
+      "exact_two_sided_signflip_p": 3.0517578125e-05,
+      "bootstrap_mean_95ci": [
+        0.27710701671078025,
+        0.35158165008915876
+      ],
+      "values": [
+        0.3152919241285193,
+        0.21579498753090737,
+        0.34227766199319437,
+        0.20453723815064453,
+        0.3755958096222596,
+        0.16310438617823286,
+        0.4026413617914626,
+        0.285567542599674,
+        0.4304493854437028,
+        0.33943829911515433,
+        0.3715586590338473,
+        0.33405247756959666,
+        0.42136796818765343,
+        0.2597765393454025,
+        0.27084423740061025,
+        0.31387635790998697
+      ]
+    }
+  },
+  "crossmodal_transfer": {
+    "meg_teacher_to_heldout_eeg": {
+      "mean": 0.15961441096083456,
+      "median": 0.16311315577056562,
+      "positive_n": 10,
+      "n": 10,
+      "exact_two_sided_signflip_p": 0.001953125,
+      "bootstrap_mean_95ci": [
+        0.11920890116479846,
+        0.2001753801951182
+      ],
+      "values": [
+        0.11066426481580857,
+        0.07221096944702116,
+        0.2061717943877362,
+        0.09293127366513444,
+        0.22755673528173395,
+        0.237665579174126,
+        0.2444601946341148,
+        0.13276738504218916,
+        0.0782569866615391,
+        0.19345892649894209
+      ]
+    },
+    "eeg_teacher_to_heldout_meg": {
+      "mean": 0.12234808449050627,
+      "median": 0.1256225623197956,
+      "positive_n": 16,
+      "n": 16,
+      "exact_two_sided_signflip_p": 3.0517578125e-05,
+      "bootstrap_mean_95ci": [
+        0.10264780079551651,
+        0.14163226092640194
+      ],
+      "values": [
+        0.12473409376140786,
+        0.14160725979003635,
+        0.1381689387201952,
+        0.18692357693758754,
+        0.038743632365286634,
+        0.16636527441914625,
+        0.0888569483741258,
+        0.12123710317444769,
+        0.11181567644149039,
+        0.08949226153280343,
+        0.1301569124139901,
+        0.12651103087818336,
+        0.15944504347389593,
+        0.08582605485366786,
+        0.06583042438549311,
+        0.18185512032634282
+      ]
+    },
+    "equal_modality_weighted_mean": 0.14098124772567042,
+    "within_category_label_permutation": {
+      "n": 9999,
+      "seed": 20260806,
+      "null_mean": 0.00011633082733230235,
+      "null_sd": 0.02407546363319851,
+      "null_95th": 0.04183258310508485,
+      "one_sided_p": 0.0001
+    }
+  },
+  "late_specificity": {
+    "meg_prestimulus": {
+      "mean": -0.023114768233073527,
+      "median": -0.019472189808392076,
+      "positive_n": 7,
+      "n": 16,
+      "exact_two_sided_signflip_p": 0.16680908203125,
+      "bootstrap_mean_95ci": [
+        -0.053607104209622565,
+        0.006558510152142229
+      ],
+      "values": [
+        0.005902760112302351,
+        0.028807646564763655,
+        -0.09853314597654272,
+        -0.10413797274749445,
+        0.030407184519573735,
+        -0.046204681993828225,
+        -0.05079684908811688,
+        0.033919637560506886,
+        -0.019288346903344633,
+        0.038190129183738084,
+        0.0475843528821959,
+        -0.1414774798091577,
+        -0.03976194426486404,
+        0.06794403820649444,
+        -0.01965603271343952,
+        -0.10273558726196329
+      ],
+      "exact_one_sided_positive_signflip_p": 0.9166107177734375
+    },
+    "meg_late_minus_prestimulus": {
+      "mean": 0.14546285272357978,
+      "median": 0.12496767849697026,
+      "positive_n": 16,
+      "n": 16,
+      "exact_two_sided_signflip_p": 3.0517578125e-05,
+      "bootstrap_mean_95ci": [
+        0.10232261869344907,
+        0.18862355512187076
+      ],
+      "values": [
+        0.1188313336491055,
+        0.1127996132252727,
+        0.23670208469673792,
+        0.291061549685082,
+        0.0083364478457129,
+        0.2125699564129745,
+        0.13965379746224268,
+        0.0873174656139408,
+        0.131104023344835,
+        0.051302132349065346,
+        0.08257255953179421,
+        0.2679885106873411,
+        0.19920698773875997,
+        0.017882016647173413,
+        0.08548645709893263,
+        0.2845907075883061
+      ]
+    }
+  },
+  "within_category": {
+    "meg_teacher_to_heldout_eeg": {
+      "mean": 0.17079422609966938,
+      "median": 0.16340218556401054,
+      "positive_n": 10,
+      "n": 10,
+      "exact_two_sided_signflip_p": 0.001953125,
+      "bootstrap_mean_95ci": [
+        0.12527900946110115,
+        0.21502691532688872
+      ],
+      "values": [
+        0.1458969931833914,
+        0.12101855706530898,
+        0.24939130154496594,
+        0.04317303199087515,
+        0.2652512413594584,
+        0.2610873089567745,
+        0.2222729539242442,
+        0.1377278161588796,
+        0.08121567886816566,
+        0.18090737794462966
+      ]
+    },
+    "eeg_teacher_to_heldout_meg": {
+      "mean": 0.13981478005244363,
+      "median": 0.14069371409525472,
+      "positive_n": 16,
+      "n": 16,
+      "exact_two_sided_signflip_p": 3.0517578125e-05,
+      "bootstrap_mean_95ci": [
+        0.11224872847909048,
+        0.16775265205122405
+      ],
+      "values": [
+        0.07725899088521873,
+        0.1993457815950206,
+        0.15452548259845741,
+        0.252594957662052,
+        0.11712257589025735,
+        0.1834477917721846,
+        0.20706091017223618,
+        0.0867703535184181,
+        0.09932305300332382,
+        0.1726554808894486,
+        0.1366429412880175,
+        0.05788126749336994,
+        0.1884457232127247,
+        0.11472987961040712,
+        0.04448680434546952,
+        0.14474448690249192
+      ]
+    },
+    "direct_teacher_rho": 0.3246111230054347,
+    "equal_modality_weighted_mean": 0.1553045030760565,
+    "label_permutation": {
+      "n": 9999,
+      "seed": 20260806,
+      "null_mean": -0.00024738225727566956,
+      "null_sd": 0.030346580512141525,
+      "null_95th": 0.05070390075683924,
+      "one_sided_p": 0.0001
+    }
+  },
+  "gates": {
+    "R1_eeg_late_reliability": true,
+    "R2_meg_late_session_reliability": true,
+    "S1_meg_teacher_to_heldout_eeg": true,
+    "S2_eeg_teacher_to_heldout_meg": true,
+    "S3_direct_teacher_agreement": true,
+    "S4_label_permutation": true,
+    "S5_late_specificity": true,
+    "S6_within_category": true
+  },
+  "category_names": [
+    "human bodypart",
+    "human face",
+    "nonhuman bodypart",
+    "nonhuman face",
+    "natural inanimate",
+    "artificial inanimate"
+  ],
+  "hashes": {
+    "protocol": "1aa1219f2a6f28c10472bdd558e22e32a72ea885ace976b18df5b6b88f8d6334",
+    "script": "fb0ca5f93c50e490b971861517603157a1d922d6d8ee038064f54cc949689476",
+    "mapping": "6b0d89002ddb2cc80c947aaba1a403480ac4f338233af30a5eba4742dc963a08",
+    "dino": "17261cadd40f173defe59764a711b5e5f712dae5c4b5fcc04656938d62612561",
+    "meg": "4b18c4720ee1984ba516b268050106f3a46557865998640a0e4cfba4b33203aa"
+  }
+}

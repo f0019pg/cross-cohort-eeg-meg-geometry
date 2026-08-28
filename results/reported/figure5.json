@@ -1,0 +1,136 @@
+{
+  "source_results": "results/reported/multibackbone_adaptation.json",
+  "noise_ceiling_definition": {
+    "lower": "participant RDM versus the mean RDM of all other participants, calculated within each 24-image held-out fold",
+    "upper": "participant RDM versus the group mean RDM including that participant, calculated within each 24-image held-out fold"
+  },
+  "noise_ceilings": {
+    "EEG": {
+      "lower": 0.46288878460430105,
+      "upper": 0.5868527838315912
+    },
+    "MEG": {
+      "lower": 0.3434995219817069,
+      "upper": 0.4584814238761814
+    }
+  },
+  "models": {
+    "DINOv3": {
+      "EEG": {
+        "frozen_mean": 0.25077192565349793,
+        "adapted_mean": 0.2801141246890441,
+        "gain_mean": 0.02934219903554614,
+        "participant_gain_ci": [
+          0.02032219926492589,
+          0.03868625587088774
+        ],
+        "positive_n": 10,
+        "n": 10,
+        "fold_means": [
+          0.05383168474821537,
+          0.004922132068562157,
+          0.0292727802898609
+        ]
+      },
+      "MEG": {
+        "frozen_mean": 0.22437197671266107,
+        "adapted_mean": 0.24194879258762483,
+        "gain_mean": 0.017576815874963736,
+        "participant_gain_ci": [
+          0.008986432069081961,
+          0.02676801308485895
+        ],
+        "positive_n": 12,
+        "n": 16,
+        "fold_means": [
+          0.02863686305846093,
+          0.013053324010787527,
+          0.01104026055564275
+        ]
+      },
+      "geometry_preservation_minimum": 0.9782023658338209
+    },
+    "CLIP": {
+      "EEG": {
+        "frozen_mean": 0.17938493109365378,
+        "adapted_mean": 0.19793265344461478,
+        "gain_mean": 0.018547722350961006,
+        "participant_gain_ci": [
+          0.011584895489443305,
+          0.02627880606594332
+        ],
+        "positive_n": 10,
+        "n": 10,
+        "fold_means": [
+          0.02066030543085174,
+          0.017729725134880903,
+          0.017253136487150367
+        ]
+      },
+      "MEG": {
+        "frozen_mean": 0.1542175958295877,
+        "adapted_mean": 0.17223663808069709,
+        "gain_mean": 0.018019042251109427,
+        "participant_gain_ci": [
+          0.012030475747111668,
+          0.02405412843709422
+        ],
+        "positive_n": 15,
+        "n": 16,
+        "fold_means": [
+          0.021467623178893,
+          0.015700546510466453,
+          0.016888957063968833
+        ]
+      },
+      "geometry_preservation_minimum": 0.9805174012927899
+    },
+    "SigLIP": {
+      "EEG": {
+        "frozen_mean": 0.18088025325083734,
+        "adapted_mean": 0.21287262600384058,
+        "gain_mean": 0.03199237275300319,
+        "participant_gain_ci": [
+          0.019504834694715357,
+          0.04526600992171206
+        ],
+        "positive_n": 9,
+        "n": 10,
+        "fold_means": [
+          0.050017638597624495,
+          0.028522445248519563,
+          0.01743703441286552
+        ]
+      },
+      "MEG": {
+        "frozen_mean": 0.19072822876385898,
+        "adapted_mean": 0.21441111000128424,
+        "gain_mean": 0.023682881237425263,
+        "participant_gain_ci": [
+          0.01652632400365292,
+          0.030456214059445506
+        ],
+        "positive_n": 15,
+        "n": 16,
+        "fold_means": [
+          0.029286397168990168,
+          0.030107910846021033,
+          0.011654335697264595
+        ]
+      },
+      "geometry_preservation_minimum": 0.9668840341890099
+    }
+  },
+  "teacher_specificity": {
+    "observed_single_seed_equal_modality_gain": 0.022388994441556714,
+    "n": 99,
+    "seed": 20260807,
+    "null_mean": 0.013722639285953304,
+    "null_sd": 0.004023385892467602,
+    "null_95th": 0.0199413080059223,
+    "one_sided_p": 0.04,
+    "verified_ge_observed_n": 3,
+    "rank_from_top_including_observed": 4,
+    "total_including_observed": 100
+  }
+}

@@ -1,0 +1,460 @@
+{
+  "analysis": "leave-one-image-out influence on primary controlled late EEG-MEG correspondence",
+  "status": "POST_OUTCOME_SENSITIVITY_NOT_PREREGISTERED",
+  "n_images": 72,
+  "pairwise_residuals": "DINOv3 and 21 category-pair controls fitted in the full 72-image sample",
+  "summary": {
+    "direct_group_rho": {
+      "min": 0.23531491931330112,
+      "max": 0.32795290410123895,
+      "mean": 0.29896877154115103,
+      "all_positive": true
+    },
+    "meg_group_to_eeg_mean": {
+      "min": 0.1227122673751039,
+      "max": 0.173810174412539,
+      "mean": 0.15958782301091498,
+      "all_positive": true
+    },
+    "eeg_group_to_meg_mean": {
+      "min": 0.09265186244901552,
+      "max": 0.13394237152333116,
+      "mean": 0.12233021113378457,
+      "all_positive": true
+    }
+  },
+  "rows": [
+    {
+      "omitted_image_index_zero_based": 0,
+      "direct_group_rho": 0.3013736725438044,
+      "meg_group_to_eeg_mean": 0.16077329622630715,
+      "eeg_group_to_meg_mean": 0.12354621560635741
+    },
+    {
+      "omitted_image_index_zero_based": 1,
+      "direct_group_rho": 0.3049851362843557,
+      "meg_group_to_eeg_mean": 0.16398949356695872,
+      "eeg_group_to_meg_mean": 0.12479060733159597
+    },
+    {
+      "omitted_image_index_zero_based": 2,
+      "direct_group_rho": 0.29996818155850363,
+      "meg_group_to_eeg_mean": 0.16044400034026363,
+      "eeg_group_to_meg_mean": 0.12271955462451344
+    },
+    {
+      "omitted_image_index_zero_based": 3,
+      "direct_group_rho": 0.2988631268600411,
+      "meg_group_to_eeg_mean": 0.15989795094528525,
+      "eeg_group_to_meg_mean": 0.12257826646980946
+    },
+    {
+      "omitted_image_index_zero_based": 4,
+      "direct_group_rho": 0.3082614184489375,
+      "meg_group_to_eeg_mean": 0.1649204626613848,
+      "eeg_group_to_meg_mean": 0.124314308061247
+    },
+    {
+      "omitted_image_index_zero_based": 5,
+      "direct_group_rho": 0.31940717567269,
+      "meg_group_to_eeg_mean": 0.1702263875268027,
+      "eeg_group_to_meg_mean": 0.13009611828327905
+    },
+    {
+      "omitted_image_index_zero_based": 6,
+      "direct_group_rho": 0.2976612992590299,
+      "meg_group_to_eeg_mean": 0.15915037426282638,
+      "eeg_group_to_meg_mean": 0.12157234754114629
+    },
+    {
+      "omitted_image_index_zero_based": 7,
+      "direct_group_rho": 0.29758710103328584,
+      "meg_group_to_eeg_mean": 0.15904809371911482,
+      "eeg_group_to_meg_mean": 0.12237210802865514
+    },
+    {
+      "omitted_image_index_zero_based": 8,
+      "direct_group_rho": 0.30246119996526405,
+      "meg_group_to_eeg_mean": 0.15897749843261577,
+      "eeg_group_to_meg_mean": 0.12406070819469514
+    },
+    {
+      "omitted_image_index_zero_based": 9,
+      "direct_group_rho": 0.29654519438153276,
+      "meg_group_to_eeg_mean": 0.15853183605297594,
+      "eeg_group_to_meg_mean": 0.12163617013359464
+    },
+    {
+      "omitted_image_index_zero_based": 10,
+      "direct_group_rho": 0.30100288814015863,
+      "meg_group_to_eeg_mean": 0.16133457345785585,
+      "eeg_group_to_meg_mean": 0.12365556561273919
+    },
+    {
+      "omitted_image_index_zero_based": 11,
+      "direct_group_rho": 0.2943625984474507,
+      "meg_group_to_eeg_mean": 0.15703961273120198,
+      "eeg_group_to_meg_mean": 0.12087928465775197
+    },
+    {
+      "omitted_image_index_zero_based": 12,
+      "direct_group_rho": 0.3005821277579942,
+      "meg_group_to_eeg_mean": 0.16023308388388588,
+      "eeg_group_to_meg_mean": 0.12314890516259942
+    },
+    {
+      "omitted_image_index_zero_based": 13,
+      "direct_group_rho": 0.29834980172147385,
+      "meg_group_to_eeg_mean": 0.1595545429191038,
+      "eeg_group_to_meg_mean": 0.12222500263684868
+    },
+    {
+      "omitted_image_index_zero_based": 14,
+      "direct_group_rho": 0.3086480626455008,
+      "meg_group_to_eeg_mean": 0.16393276044289895,
+      "eeg_group_to_meg_mean": 0.1262916609003103
+    },
+    {
+      "omitted_image_index_zero_based": 15,
+      "direct_group_rho": 0.30034534166941235,
+      "meg_group_to_eeg_mean": 0.15950211674130516,
+      "eeg_group_to_meg_mean": 0.12339630459916331
+    },
+    {
+      "omitted_image_index_zero_based": 16,
+      "direct_group_rho": 0.29747264877726354,
+      "meg_group_to_eeg_mean": 0.1586787938613572,
+      "eeg_group_to_meg_mean": 0.12210909665395005
+    },
+    {
+      "omitted_image_index_zero_based": 17,
+      "direct_group_rho": 0.2978839187074407,
+      "meg_group_to_eeg_mean": 0.15901747662849136,
+      "eeg_group_to_meg_mean": 0.12202794190757066
+    },
+    {
+      "omitted_image_index_zero_based": 18,
+      "direct_group_rho": 0.29677762894902127,
+      "meg_group_to_eeg_mean": 0.15816816802346906,
+      "eeg_group_to_meg_mean": 0.12171150941405136
+    },
+    {
+      "omitted_image_index_zero_based": 19,
+      "direct_group_rho": 0.29641985076332844,
+      "meg_group_to_eeg_mean": 0.1583865777043608,
+      "eeg_group_to_meg_mean": 0.12164762038969319
+    },
+    {
+      "omitted_image_index_zero_based": 20,
+      "direct_group_rho": 0.28820734817177607,
+      "meg_group_to_eeg_mean": 0.1538170399516631,
+      "eeg_group_to_meg_mean": 0.11788962822655893
+    },
+    {
+      "omitted_image_index_zero_based": 21,
+      "direct_group_rho": 0.302411326792493,
+      "meg_group_to_eeg_mean": 0.1619856305955797,
+      "eeg_group_to_meg_mean": 0.12368207020299225
+    },
+    {
+      "omitted_image_index_zero_based": 22,
+      "direct_group_rho": 0.30022018086324215,
+      "meg_group_to_eeg_mean": 0.16072903728033877,
+      "eeg_group_to_meg_mean": 0.1230760759314817
+    },
+    {
+      "omitted_image_index_zero_based": 23,
+      "direct_group_rho": 0.3011085269715083,
+      "meg_group_to_eeg_mean": 0.16061337713228904,
+      "eeg_group_to_meg_mean": 0.12330358298344074
+    },
+    {
+      "omitted_image_index_zero_based": 24,
+      "direct_group_rho": 0.2976359699579503,
+      "meg_group_to_eeg_mean": 0.15890373894331597,
+      "eeg_group_to_meg_mean": 0.1219100026772385
+    },
+    {
+      "omitted_image_index_zero_based": 25,
+      "direct_group_rho": 0.30203385187630855,
+      "meg_group_to_eeg_mean": 0.16154943280303877,
+      "eeg_group_to_meg_mean": 0.12387480752271524
+    },
+    {
+      "omitted_image_index_zero_based": 26,
+      "direct_group_rho": 0.2975475058437129,
+      "meg_group_to_eeg_mean": 0.15900444646051148,
+      "eeg_group_to_meg_mean": 0.1218238388463597
+    },
+    {
+      "omitted_image_index_zero_based": 27,
+      "direct_group_rho": 0.3064846364288487,
+      "meg_group_to_eeg_mean": 0.16406292518810578,
+      "eeg_group_to_meg_mean": 0.12584970831668685
+    },
+    {
+      "omitted_image_index_zero_based": 28,
+      "direct_group_rho": 0.3004531585894721,
+      "meg_group_to_eeg_mean": 0.1612635232924679,
+      "eeg_group_to_meg_mean": 0.12365187015008582
+    },
+    {
+      "omitted_image_index_zero_based": 29,
+      "direct_group_rho": 0.29718299248907226,
+      "meg_group_to_eeg_mean": 0.15871269784025857,
+      "eeg_group_to_meg_mean": 0.12162122237701758
+    },
+    {
+      "omitted_image_index_zero_based": 30,
+      "direct_group_rho": 0.23531491931330112,
+      "meg_group_to_eeg_mean": 0.1227122673751039,
+      "eeg_group_to_meg_mean": 0.09265186244901552
+    },
+    {
+      "omitted_image_index_zero_based": 31,
+      "direct_group_rho": 0.32795290410123895,
+      "meg_group_to_eeg_mean": 0.173810174412539,
+      "eeg_group_to_meg_mean": 0.13394237152333116
+    },
+    {
+      "omitted_image_index_zero_based": 32,
+      "direct_group_rho": 0.3000421751159984,
+      "meg_group_to_eeg_mean": 0.1603153337970026,
+      "eeg_group_to_meg_mean": 0.1230464680975022
+    },
+    {
+      "omitted_image_index_zero_based": 33,
+      "direct_group_rho": 0.2953692735079354,
+      "meg_group_to_eeg_mean": 0.15750142935960054,
+      "eeg_group_to_meg_mean": 0.121033325443357
+    },
+    {
+      "omitted_image_index_zero_based": 34,
+      "direct_group_rho": 0.2960781089163259,
+      "meg_group_to_eeg_mean": 0.15794234973231513,
+      "eeg_group_to_meg_mean": 0.12123003185433096
+    },
+    {
+      "omitted_image_index_zero_based": 35,
+      "direct_group_rho": 0.2943538519597351,
+      "meg_group_to_eeg_mean": 0.1572162243256955,
+      "eeg_group_to_meg_mean": 0.12070431886260391
+    },
+    {
+      "omitted_image_index_zero_based": 36,
+      "direct_group_rho": 0.29427308558917015,
+      "meg_group_to_eeg_mean": 0.15703941384861625,
+      "eeg_group_to_meg_mean": 0.12015843692811055
+    },
+    {
+      "omitted_image_index_zero_based": 37,
+      "direct_group_rho": 0.29906407977553756,
+      "meg_group_to_eeg_mean": 0.15963839894376508,
+      "eeg_group_to_meg_mean": 0.12231692456607511
+    },
+    {
+      "omitted_image_index_zero_based": 38,
+      "direct_group_rho": 0.2998169289831299,
+      "meg_group_to_eeg_mean": 0.15957899890778737,
+      "eeg_group_to_meg_mean": 0.12329317964448575
+    },
+    {
+      "omitted_image_index_zero_based": 39,
+      "direct_group_rho": 0.3079304784985332,
+      "meg_group_to_eeg_mean": 0.16442540423094704,
+      "eeg_group_to_meg_mean": 0.12539259216038348
+    },
+    {
+      "omitted_image_index_zero_based": 40,
+      "direct_group_rho": 0.2929196214459863,
+      "meg_group_to_eeg_mean": 0.15648203910718528,
+      "eeg_group_to_meg_mean": 0.11972083529589148
+    },
+    {
+      "omitted_image_index_zero_based": 41,
+      "direct_group_rho": 0.29139235891773657,
+      "meg_group_to_eeg_mean": 0.1552374726631545,
+      "eeg_group_to_meg_mean": 0.11944224104859558
+    },
+    {
+      "omitted_image_index_zero_based": 42,
+      "direct_group_rho": 0.29925762739750633,
+      "meg_group_to_eeg_mean": 0.15950227173605455,
+      "eeg_group_to_meg_mean": 0.12238445065532504
+    },
+    {
+      "omitted_image_index_zero_based": 43,
+      "direct_group_rho": 0.3036375916741923,
+      "meg_group_to_eeg_mean": 0.16270424650070392,
+      "eeg_group_to_meg_mean": 0.1243483731818335
+    },
+    {
+      "omitted_image_index_zero_based": 44,
+      "direct_group_rho": 0.2971416742434279,
+      "meg_group_to_eeg_mean": 0.1587857249126265,
+      "eeg_group_to_meg_mean": 0.12144445582175517
+    },
+    {
+      "omitted_image_index_zero_based": 45,
+      "direct_group_rho": 0.2939852681569173,
+      "meg_group_to_eeg_mean": 0.1572739365461897,
+      "eeg_group_to_meg_mean": 0.1202653154801461
+    },
+    {
+      "omitted_image_index_zero_based": 46,
+      "direct_group_rho": 0.3002417091420271,
+      "meg_group_to_eeg_mean": 0.160822683009322,
+      "eeg_group_to_meg_mean": 0.1233683228941147
+    },
+    {
+      "omitted_image_index_zero_based": 47,
+      "direct_group_rho": 0.28254446267266875,
+      "meg_group_to_eeg_mean": 0.14994639155886644,
+      "eeg_group_to_meg_mean": 0.11479066224035464
+    },
+    {
+      "omitted_image_index_zero_based": 48,
+      "direct_group_rho": 0.30959195789152666,
+      "meg_group_to_eeg_mean": 0.16564554059720699,
+      "eeg_group_to_meg_mean": 0.12594257564695785
+    },
+    {
+      "omitted_image_index_zero_based": 49,
+      "direct_group_rho": 0.3033078401906707,
+      "meg_group_to_eeg_mean": 0.16163919691135892,
+      "eeg_group_to_meg_mean": 0.12423747758258231
+    },
+    {
+      "omitted_image_index_zero_based": 50,
+      "direct_group_rho": 0.29831180481006236,
+      "meg_group_to_eeg_mean": 0.16005849870025726,
+      "eeg_group_to_meg_mean": 0.12235714936352518
+    },
+    {
+      "omitted_image_index_zero_based": 51,
+      "direct_group_rho": 0.28935729920994446,
+      "meg_group_to_eeg_mean": 0.1536522831191808,
+      "eeg_group_to_meg_mean": 0.11762845596119492
+    },
+    {
+      "omitted_image_index_zero_based": 52,
+      "direct_group_rho": 0.3064376388823521,
+      "meg_group_to_eeg_mean": 0.16393789611107554,
+      "eeg_group_to_meg_mean": 0.1251777806987115
+    },
+    {
+      "omitted_image_index_zero_based": 53,
+      "direct_group_rho": 0.30138163264293555,
+      "meg_group_to_eeg_mean": 0.16033205461408315,
+      "eeg_group_to_meg_mean": 0.12360474531135979
+    },
+    {
+      "omitted_image_index_zero_based": 54,
+      "direct_group_rho": 0.3004487531758647,
+      "meg_group_to_eeg_mean": 0.16105209467098214,
+      "eeg_group_to_meg_mean": 0.12315315094877652
+    },
+    {
+      "omitted_image_index_zero_based": 55,
+      "direct_group_rho": 0.2839752678749753,
+      "meg_group_to_eeg_mean": 0.15125969654118462,
+      "eeg_group_to_meg_mean": 0.11431513398934046
+    },
+    {
+      "omitted_image_index_zero_based": 56,
+      "direct_group_rho": 0.29708724399064224,
+      "meg_group_to_eeg_mean": 0.1588479978883973,
+      "eeg_group_to_meg_mean": 0.12199818170329513
+    },
+    {
+      "omitted_image_index_zero_based": 57,
+      "direct_group_rho": 0.2972206783271774,
+      "meg_group_to_eeg_mean": 0.15863206812804492,
+      "eeg_group_to_meg_mean": 0.12046300726408743
+    },
+    {
+      "omitted_image_index_zero_based": 58,
+      "direct_group_rho": 0.2968340016646241,
+      "meg_group_to_eeg_mean": 0.15817542262280765,
+      "eeg_group_to_meg_mean": 0.12178780512731269
+    },
+    {
+      "omitted_image_index_zero_based": 59,
+      "direct_group_rho": 0.29970025446708487,
+      "meg_group_to_eeg_mean": 0.15956156432370547,
+      "eeg_group_to_meg_mean": 0.12252775121806314
+    },
+    {
+      "omitted_image_index_zero_based": 60,
+      "direct_group_rho": 0.2994574597321526,
+      "meg_group_to_eeg_mean": 0.15893168335352414,
+      "eeg_group_to_meg_mean": 0.12315543333960419
+    },
+    {
+      "omitted_image_index_zero_based": 61,
+      "direct_group_rho": 0.29876333718486914,
+      "meg_group_to_eeg_mean": 0.1603057927524684,
+      "eeg_group_to_meg_mean": 0.12238781698818604
+    },
+    {
+      "omitted_image_index_zero_based": 62,
+      "direct_group_rho": 0.29872620951854145,
+      "meg_group_to_eeg_mean": 0.1592763506763359,
+      "eeg_group_to_meg_mean": 0.12300169628242758
+    },
+    {
+      "omitted_image_index_zero_based": 63,
+      "direct_group_rho": 0.2928807829369595,
+      "meg_group_to_eeg_mean": 0.15677084811441566,
+      "eeg_group_to_meg_mean": 0.11989606435828967
+    },
+    {
+      "omitted_image_index_zero_based": 64,
+      "direct_group_rho": 0.30344085287500744,
+      "meg_group_to_eeg_mean": 0.16246779137045306,
+      "eeg_group_to_meg_mean": 0.12404897796993991
+    },
+    {
+      "omitted_image_index_zero_based": 65,
+      "direct_group_rho": 0.30922502980700106,
+      "meg_group_to_eeg_mean": 0.16567118447032583,
+      "eeg_group_to_meg_mean": 0.12684269376905927
+    },
+    {
+      "omitted_image_index_zero_based": 66,
+      "direct_group_rho": 0.3039250439877491,
+      "meg_group_to_eeg_mean": 0.1630000622113466,
+      "eeg_group_to_meg_mean": 0.12418986744441997
+    },
+    {
+      "omitted_image_index_zero_based": 67,
+      "direct_group_rho": 0.2961642924884342,
+      "meg_group_to_eeg_mean": 0.1583611965341468,
+      "eeg_group_to_meg_mean": 0.1217063726074619
+    },
+    {
+      "omitted_image_index_zero_based": 68,
+      "direct_group_rho": 0.30757175783226937,
+      "meg_group_to_eeg_mean": 0.16353644247695098,
+      "eeg_group_to_meg_mean": 0.12645597242388862
+    },
+    {
+      "omitted_image_index_zero_based": 69,
+      "direct_group_rho": 0.3006047009899081,
+      "meg_group_to_eeg_mean": 0.16148717869422285,
+      "eeg_group_to_meg_mean": 0.12266468763027844
+    },
+    {
+      "omitted_image_index_zero_based": 70,
+      "direct_group_rho": 0.30816808071913315,
+      "meg_group_to_eeg_mean": 0.16469013291248807,
+      "eeg_group_to_meg_mean": 0.1258738480876871
+    },
+    {
+      "omitted_image_index_zero_based": 71,
+      "direct_group_rho": 0.2996096387807447,
+      "meg_group_to_eeg_mean": 0.15964656840740582,
+      "eeg_group_to_meg_mean": 0.12336228432467945
+    }
+  ]
+}

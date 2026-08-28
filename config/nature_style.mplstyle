@@ -1,0 +1,68 @@
+# ============================================================
+# Nature-family figure style for matplotlib
+# Widths: 89 mm (1 col) | 120-136 mm (1.5 col) | 183 mm (2 col)
+# Max height 247 mm. Design AT FINAL SIZE - never scale after.
+# Panel letters: 8 pt bold lowercase upright. Other text 5-7 pt.
+# Line weights 0.25-1 pt. Export vector PDF, text NOT outlined.
+# ============================================================
+
+# --- font: Nature asks for Helvetica or Arial ---------------
+font.family         : sans-serif
+font.sans-serif     : Arial, Helvetica, Liberation Sans, FreeSans, DejaVu Sans
+font.size           : 7
+axes.labelsize      : 7
+axes.titlesize      : 7
+xtick.labelsize      : 6
+ytick.labelsize      : 6
+legend.fontsize     : 6
+figure.titlesize    : 8
+
+# --- axes: open frame, no box, no editorial titles ----------
+axes.spines.top     : False
+axes.spines.right   : False
+axes.linewidth      : 0.5
+axes.labelpad       : 2.0
+axes.titlelocation  : left
+axes.titleweight    : normal
+axes.axisbelow      : True
+axes.grid           : False
+axes.edgecolor      : 000000
+
+# --- ticks: outward, short, thin ----------------------------
+xtick.direction     : out
+ytick.direction     : out
+xtick.major.size    : 2.0
+ytick.major.size    : 2.0
+xtick.major.width   : 0.5
+ytick.major.width   : 0.5
+xtick.major.pad     : 1.5
+ytick.major.pad     : 1.5
+
+# --- lines & markers ----------------------------------------
+lines.linewidth     : 0.75
+lines.markersize    : 3
+lines.markeredgewidth : 0.0
+patch.linewidth     : 0.5
+hatch.linewidth     : 0.5
+
+# --- legend: no frame -------------------------------------
+legend.frameon      : False
+legend.handlelength : 1.2
+legend.handletextpad : 0.4
+legend.columnspacing : 1.0
+legend.labelspacing : 0.3
+legend.borderpad    : 0.0
+
+# --- figure & export ----------------------------------------
+figure.dpi          : 300
+savefig.dpi         : 600
+savefig.bbox        : tight
+savefig.pad_inches  : 0.01
+savefig.transparent : False
+figure.facecolor    : white
+axes.facecolor      : white
+
+# CRITICAL: keep text as text in vector output (type 42 = TrueType)
+pdf.fonttype        : 42
+ps.fonttype         : 42
+svg.fonttype        : none

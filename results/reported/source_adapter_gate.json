@@ -1,0 +1,245 @@
+{
+  "analysis": "late EEG-MEG consensus adapter held-out source gate",
+  "decision": "GO_STAGE2_EXTERNAL",
+  "input_audit": {
+    "status": "STAGE1_INPUT_CHECK_PASSED",
+    "stage0_decision": "GO_STAGE1_ADAPTER",
+    "eeg_dir": "${KANESHIRO_EEG_DIR}",
+    "meg_file": "${CICHY_MEG_FILE}",
+    "dino_shape": [
+      72,
+      384
+    ],
+    "categories": [
+      "human bodypart",
+      "human face",
+      "nonhuman bodypart",
+      "nonhuman face",
+      "natural inanimate",
+      "artificial inanimate"
+    ],
+    "participant_folds": {
+      "A": "odd EEG/MEG teacher, even EEG/MEG evaluation",
+      "B": "even EEG/MEG teacher, odd EEG/MEG evaluation"
+    },
+    "object_folds": [
+      {
+        "fold": 0,
+        "train_n": 48,
+        "test_n": 24
+      },
+      {
+        "fold": 1,
+        "train_n": 48,
+        "test_n": 24
+      },
+      {
+        "fold": 2,
+        "train_n": 48,
+        "test_n": 24
+      }
+    ],
+    "model": {
+      "bottleneck": 64,
+      "lambda_anchor": 100.0,
+      "epochs": 400,
+      "seeds": [
+        20260722,
+        20260723,
+        20260724
+      ]
+    },
+    "teacher_shuffles": {
+      "n": 39,
+      "seed": 20260806
+    },
+    "hashes": {
+      "stage0": "cbd162efe095e2d52d965067efe1ec294cb49d73474114efe9d624bbb94e5d58",
+      "amendment": "04fad2d43e11b10b57c8e36839093a9552207c63390d57df3959b734aa70fb1e",
+      "script": "225babec2ebb576a153a7571d5d2e9677a193e0cb6eacc6a0520e9b6cb1fd1a4",
+      "mapping": "6b0d89002ddb2cc80c947aaba1a403480ac4f338233af30a5eba4742dc963a08",
+      "dino": "17261cadd40f173defe59764a711b5e5f712dae5c4b5fcc04656938d62612561"
+    }
+  },
+  "eeg_alignment_gain": {
+    "mean": 0.029342199035546145,
+    "median": 0.026146583428876723,
+    "positive_n": 10,
+    "n": 10,
+    "exact_two_sided_signflip_p": 0.001953125,
+    "bootstrap_mean_95ci": [
+      0.020225228345676433,
+      0.03875164116881031
+    ],
+    "values": [
+      0.01119333837338147,
+      0.027752491083426156,
+      0.049907604970906676,
+      0.05496194509985794,
+      0.03855389045266647,
+      0.03628185563137513,
+      0.0199422726297948,
+      0.02454067577432729,
+      0.02378563439331317,
+      0.006502281946412308
+    ]
+  },
+  "meg_alignment_gain": {
+    "mean": 0.017576815874963736,
+    "median": 0.013530533715747986,
+    "positive_n": 12,
+    "n": 16,
+    "exact_two_sided_signflip_p": 0.0013427734375,
+    "bootstrap_mean_95ci": [
+      0.008645868709065222,
+      0.026836783210380362
+    ],
+    "values": [
+      0.037831271433531675,
+      0.01368549725793488,
+      -0.005054532136622876,
+      -0.0009566073543471193,
+      -0.008422254248655113,
+      0.02756829002630289,
+      0.013375570173561092,
+      -0.003916230266881667,
+      0.012093624995838196,
+      0.019072406691304805,
+      0.008424917833173987,
+      0.04473604353058131,
+      0.05724728052777023,
+      0.010239389658633089,
+      0.023676222276128107,
+      0.03162816360116628
+    ]
+  },
+  "unique_displacement": {
+    "eeg": {
+      "mean": 0.08969581832458992,
+      "median": 0.07772796347356256,
+      "positive_n": 10,
+      "n": 10,
+      "exact_two_sided_signflip_p": 0.001953125,
+      "bootstrap_mean_95ci": [
+        0.05955150068692776,
+        0.12180637994631809
+      ],
+      "values": [
+        0.07534301421854236,
+        0.050794876752434465,
+        0.16486962651607498,
+        0.05578883879217044,
+        0.15948209117256726,
+        0.02595101165803776,
+        0.15229689302203664,
+        0.10649577409445306,
+        0.025823144290999397,
+        0.08011291272858277
+      ]
+    },
+    "meg": {
+      "mean": 0.06269715378134205,
+      "median": 0.056093756072569945,
+      "positive_n": 14,
+      "n": 16,
+      "exact_two_sided_signflip_p": 0.00042724609375,
+      "bootstrap_mean_95ci": [
+        0.03549551339058732,
+        0.09074606858355193
+      ],
+      "values": [
+        0.16927342972712947,
+        0.07535357880839873,
+        0.04487478445948257,
+        -0.0007225529221390239,
+        -0.037731695624679845,
+        0.06275504183568129,
+        0.03058084489939748,
+        0.05477313437577824,
+        0.035952840309610205,
+        0.07118093946425225,
+        0.011408038094020195,
+        0.12489983105224277,
+        0.1700864089357953,
+        0.013895570904451574,
+        0.05741437776936165,
+        0.11915988841269003
+      ]
+    }
+  },
+  "object_fold_gain": [
+    {
+      "fold": 0,
+      "eeg_mean_gain": 0.05383168474821537,
+      "meg_mean_gain": 0.02863686305846093
+    },
+    {
+      "fold": 1,
+      "eeg_mean_gain": 0.004922132068562157,
+      "meg_mean_gain": 0.013053324010787527
+    },
+    {
+      "fold": 2,
+      "eeg_mean_gain": 0.0292727802898609,
+      "meg_mean_gain": 0.01104026055564275
+    }
+  ],
+  "geometry_preservation": {
+    "minimum": 0.9782023658338209,
+    "cells": [
+      {
+        "participant_fold": "A_odd_teacher_even_evaluation",
+        "object_fold": 0,
+        "rho": 0.9832097144732523
+      },
+      {
+        "participant_fold": "A_odd_teacher_even_evaluation",
+        "object_fold": 1,
+        "rho": 0.9828398567372042
+      },
+      {
+        "participant_fold": "A_odd_teacher_even_evaluation",
+        "object_fold": 2,
+        "rho": 0.9844357243760792
+      },
+      {
+        "participant_fold": "B_even_teacher_odd_evaluation",
+        "object_fold": 0,
+        "rho": 0.9835704399195218
+      },
+      {
+        "participant_fold": "B_even_teacher_odd_evaluation",
+        "object_fold": 1,
+        "rho": 0.9782023658338209
+      },
+      {
+        "participant_fold": "B_even_teacher_odd_evaluation",
+        "object_fold": 2,
+        "rho": 0.9874099970034674
+      }
+    ]
+  },
+  "teacher_specificity": {
+    "observed_single_seed_equal_modality_gain": 0.02354199131027728,
+    "n": 39,
+    "seed": 20260806,
+    "null_mean": 0.011488178083042054,
+    "null_sd": 0.0044855159523211185,
+    "null_95th": 0.01867738807556918,
+    "one_sided_p": 0.025
+  },
+  "gates": {
+    "A1_eeg_alignment_gain": true,
+    "A2_meg_alignment_gain": true,
+    "A3_unique_displacement": true,
+    "A4_all_object_folds_positive": true,
+    "A5_geometry_preservation": true,
+    "A6_teacher_specificity": true
+  },
+  "hashes": {
+    "amendment": "04fad2d43e11b10b57c8e36839093a9552207c63390d57df3959b734aa70fb1e",
+    "script": "225babec2ebb576a153a7571d5d2e9677a193e0cb6eacc6a0520e9b6cb1fd1a4",
+    "stage0": "cbd162efe095e2d52d965067efe1ec294cb49d73474114efe9d624bbb94e5d58",
+    "dino": "17261cadd40f173defe59764a711b5e5f712dae5c4b5fcc04656938d62612561"
+  }
+}

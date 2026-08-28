@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "completed_at_utc": "2026-08-16T01:11:50.780382+00:00",
+  "n_permutations": 9999,
+  "n_training_seeds": 3,
+  "observed_three_seed_equal_modality_gain": 0.023060504648124723,
+  "exceedances": 218,
+  "plus_one_p": 0.0219,
+  "null_mean": 0.015483289013374032,
+  "null_sd": 0.0037256237296980493,
+  "null_95th": 0.021755414124471115,
+  "null_99th": 0.024224149361907445,
+  "seed_null_means": [
+    0.014280550092204827,
+    0.014286473645185352,
+    0.015210941086255843
+  ],
+  "source_shards": [
+    "shard4_00_0000_2500",
+    "shard4_01_2500_5000",
+    "shard4_02_5000_7500",
+    "shard4_03_7500_9999"
+  ]
+}

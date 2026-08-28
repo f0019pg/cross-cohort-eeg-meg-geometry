@@ -1,0 +1,198 @@
+{
+  "analysis": "post hoc Figure 4 descriptive visualization support",
+  "status": "DESCRIPTIVE_ONLY_NO_GATE_OR_ENDPOINT_CHANGE",
+  "source_result": "results/reported/source_geometry.json",
+  "sample": {
+    "eeg_participants": 10,
+    "meg_participants": 16,
+    "images": 72,
+    "pairs": 2556
+  },
+  "controls": "rank(DINOv3 distance) + complete six-category pair-type dummy design",
+  "direct_group_rho": 0.2990314866779863,
+  "conditions": {
+    "meg_group_to_eeg_all": {
+      "mean": 0.15961441096083456,
+      "median": 0.16311315577056562,
+      "positive_n": 10,
+      "n": 10,
+      "exact_two_sided_signflip_p": 0.001953125,
+      "bootstrap_mean_95ci": [
+        0.11920890116479846,
+        0.2001753801951182
+      ],
+      "values": [
+        0.11066426481580857,
+        0.07221096944702116,
+        0.2061717943877362,
+        0.09293127366513444,
+        0.22755673528173395,
+        0.237665579174126,
+        0.2444601946341148,
+        0.13276738504218916,
+        0.0782569866615391,
+        0.19345892649894209
+      ]
+    },
+    "meg_group_to_eeg_within": {
+      "mean": 0.17079422609966938,
+      "median": 0.16340218556401054,
+      "positive_n": 10,
+      "n": 10,
+      "exact_two_sided_signflip_p": 0.001953125,
+      "bootstrap_mean_95ci": [
+        0.12527900946110115,
+        0.21502691532688872
+      ],
+      "values": [
+        0.1458969931833914,
+        0.12101855706530898,
+        0.24939130154496594,
+        0.04317303199087515,
+        0.2652512413594584,
+        0.2610873089567745,
+        0.2222729539242442,
+        0.1377278161588796,
+        0.08121567886816566,
+        0.18090737794462966
+      ]
+    },
+    "eeg_group_to_meg_pre": {
+      "mean": -0.023114768233073527,
+      "median": -0.019472189808392076,
+      "positive_n": 7,
+      "n": 16,
+      "exact_two_sided_signflip_p": 0.16680908203125,
+      "bootstrap_mean_95ci": [
+        -0.053607104209622565,
+        0.006558510152142229
+      ],
+      "values": [
+        0.005902760112302351,
+        0.028807646564763655,
+        -0.09853314597654272,
+        -0.10413797274749445,
+        0.030407184519573735,
+        -0.046204681993828225,
+        -0.05079684908811688,
+        0.033919637560506886,
+        -0.019288346903344633,
+        0.038190129183738084,
+        0.0475843528821959,
+        -0.1414774798091577,
+        -0.03976194426486404,
+        0.06794403820649444,
+        -0.01965603271343952,
+        -0.10273558726196329
+      ],
+      "exact_one_sided_positive_signflip_p": 0.9166107177734375
+    },
+    "eeg_group_to_meg_all": {
+      "mean": 0.12234808449050627,
+      "median": 0.1256225623197956,
+      "positive_n": 16,
+      "n": 16,
+      "exact_two_sided_signflip_p": 3.0517578125e-05,
+      "bootstrap_mean_95ci": [
+        0.10264780079551651,
+        0.14163226092640194
+      ],
+      "values": [
+        0.12473409376140786,
+        0.14160725979003635,
+        0.1381689387201952,
+        0.18692357693758754,
+        0.038743632365286634,
+        0.16636527441914625,
+        0.0888569483741258,
+        0.12123710317444769,
+        0.11181567644149039,
+        0.08949226153280343,
+        0.1301569124139901,
+        0.12651103087818336,
+        0.15944504347389593,
+        0.08582605485366786,
+        0.06583042438549311,
+        0.18185512032634282
+      ]
+    },
+    "eeg_group_to_meg_within": {
+      "mean": 0.13981478005244363,
+      "median": 0.14069371409525472,
+      "positive_n": 16,
+      "n": 16,
+      "exact_two_sided_signflip_p": 3.0517578125e-05,
+      "bootstrap_mean_95ci": [
+        0.11224872847909048,
+        0.16775265205122405
+      ],
+      "values": [
+        0.07725899088521873,
+        0.1993457815950206,
+        0.15452548259845741,
+        0.252594957662052,
+        0.11712257589025735,
+        0.1834477917721846,
+        0.20706091017223618,
+        0.0867703535184181,
+        0.09932305300332382,
+        0.1726554808894486,
+        0.1366429412880175,
+        0.05788126749336994,
+        0.1884457232127247,
+        0.11472987961040712,
+        0.04448680434546952,
+        0.14474448690249192
+      ]
+    }
+  },
+  "noise_ceilings": {
+    "eeg_all": {
+      "lower_mean": 0.3805678757162709,
+      "upper_mean": 0.5337712517635853,
+      "definition": "leave-one-participant-out and inclusive group residual RDM correlations"
+    },
+    "meg_all": {
+      "lower_mean": 0.27087866333592336,
+      "upper_mean": 0.40914783205508226,
+      "definition": "leave-one-participant-out and inclusive group residual RDM correlations"
+    },
+    "eeg_within": {
+      "lower_mean": 0.36911305006743816,
+      "upper_mean": 0.526150257940514,
+      "definition": "leave-one-participant-out and inclusive group residual RDM correlations"
+    },
+    "meg_within": {
+      "lower_mean": 0.30207625806791544,
+      "upper_mean": 0.4307146925772559,
+      "definition": "leave-one-participant-out and inclusive group residual RDM correlations"
+    }
+  },
+  "ceiling_percentages": {
+    "meg_group_to_eeg_all": [
+      29.903148667798618,
+      41.941115145471116
+    ],
+    "meg_group_to_eeg_within": [
+      32.46111230054347,
+      46.27152198180603
+    ],
+    "eeg_group_to_meg_all": [
+      29.90314866779862,
+      45.16711762520009
+    ],
+    "eeg_group_to_meg_within": [
+      32.46111230054347,
+      46.284597454530584
+    ]
+  },
+  "permutations": {
+    "n": 9999,
+    "all_pairs_observed": 0.14098124772567042,
+    "all_pairs_exceedances": 0,
+    "all_pairs_p": 0.0001,
+    "within_observed": 0.1553045030760565,
+    "within_exceedances": 0,
+    "within_p": 0.0001
+  }
+}
