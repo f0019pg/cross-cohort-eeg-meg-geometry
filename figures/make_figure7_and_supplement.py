@@ -8,7 +8,6 @@ mpl.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import ndimage, stats
-from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
 
 REPO = Path(__file__).resolve().parents[1]
@@ -44,6 +43,7 @@ mpl.rcParams.update({
     "ytick.major.width": 0.8,
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
+    "svg.fonttype": "none",
     "figure.facecolor": "white",
     "axes.facecolor": "white",
 })
@@ -67,6 +67,7 @@ def strip(ax):
 def save(fig, stem):
     fig.savefig(OUT / f"{stem}.pdf", bbox_inches="tight", pad_inches=0.03)
     fig.savefig(OUT / f"{stem}.png", dpi=600, bbox_inches="tight", pad_inches=0.03)
+    fig.savefig(OUT / f"{stem}.svg", bbox_inches="tight", pad_inches=0.03)
     plt.close(fig)
 
 
@@ -82,9 +83,7 @@ nod = load_json(NOD_JSON)
 
 # Supplementary robustness figure
 fig = plt.figure(figsize=(7.20, 3.55))
-gs = fig.add_gridspec(1, 3, width_ratios=[1.30, 1.10, 0.95], wspace=0.62)
-
-ax = fig.add_subplot(gs[0, 0])
+ax = fig.add_axes([0.075, 0.17, 0.30, 0.69])
 mat = np.asarray(arr["time_by_time_mean"], float)
 tmap = np.asarray(arr["time_by_time_t"], float)
 eeg_t = np.asarray(arr["eeg_times_ms"], float)
@@ -102,12 +101,12 @@ ax.axhline(0, color=GREY, lw=0.7)
 ax.add_patch(plt.Rectangle((180, 192), 120, 128, fill=False, ec="white", lw=1.0, ls=(0, (3, 2))))
 ax.set(xlabel="MEG time (ms)", ylabel="EEG time (ms)")
 panel(ax, "a", "Full time × time correspondence")
-cax = inset_axes(ax, width="3%", height="25%", loc="upper right", borderpad=1.0)
+cax = fig.add_axes([0.388, 0.535, 0.012, 0.245])
 cb = fig.colorbar(im, cax=cax)
 cb.set_ticks([0, 0.2]); cb.ax.set_title("$\\rho$", fontsize=6, pad=1)
 cb.ax.tick_params(labelsize=6, length=2)
 
-ax = fig.add_subplot(gs[0, 1])
+ax = fig.add_axes([0.485, 0.17, 0.265, 0.69])
 sens = [
     ("Primary", core["primary_late_geometry"]["eeg_group_to_meg"]["values"]),
     ("All\ncontrols", core["broader_control_sensitivity"]["category_plus_all_visual_and_caption"]["eeg_group_to_meg"]["values"]),
@@ -127,25 +126,30 @@ ax.set_ylabel("EEG→MEG partial $\\rho$")
 panel(ax, "b", "Estimator and control sensitivity")
 strip(ax)
 
-ax = fig.add_subplot(gs[0, 2])
+ax = fig.add_axes([0.825, 0.17, 0.155, 0.69])
 full = core["primary_late_geometry"]["direct_group_rho"]
 loco = np.asarray([x["direct_group_rho"] for x in core["leave_one_category_out"]], float)
 loio_vals = np.asarray([x["direct_group_rho"] for x in loio["rows"]], float)
 rng = np.random.default_rng(11)
-ax.scatter(rng.normal(0, .035, len(loco)), loco, color="#4C78A8", s=20, alpha=.85, label="Leave one category out")
-ax.scatter(1 + rng.normal(0, .035, len(loio_vals)), loio_vals, color="#72B7B2", s=10, alpha=.60, label="Leave one image out")
-ax.axhline(full, color=ACCENT, lw=1.2, label="All images")
-ax.set_xticks([0, 1], ["Category", "Image"])
+ax.scatter(rng.normal(0, .035, len(loco)), loco, color="#4C78A8", s=20, alpha=.85)
+ax.scatter(1 + rng.normal(0, .035, len(loio_vals)), loio_vals, color="#72B7B2", s=10, alpha=.60)
+ax.axhline(full, color=ACCENT, lw=1.2)
+all_c = np.concatenate([loco, loio_vals, np.asarray([full])])
+span = max(0.01, float(np.ptp(all_c)))
+ax.set_ylim(float(np.min(all_c)) - 0.10 * span, float(np.max(all_c)) + 0.12 * span)
+ax.set_xticks([0, 1], ["Leave one\ncategory out", "Leave one\nimage out"])
 ax.set_ylabel("Group EEG–MEG partial $\\rho$")
-ax.legend(frameon=False, fontsize=6.4, loc="lower right")
+ax.text(0.98, full, "all images", transform=ax.get_yaxis_transform(),
+        color=ACCENT, fontsize=6.4, ha="right", va="bottom")
 panel(ax, "c", "Leave-one-out influence")
 strip(ax)
 save(fig, "Supplementary_Fig10_core_robustness_v001")
 
 
 # Supplementary adapter-specificity figure
-fig = plt.figure(figsize=(7.20, 4.15))
-gs = fig.add_gridspec(2, 2, hspace=0.62, wspace=0.40)
+fig = plt.figure(figsize=(7.20, 4.40))
+gs = fig.add_gridspec(2, 2, left=0.085, right=0.97, bottom=0.11, top=0.80,
+                      hspace=0.68, wspace=0.40)
 targets = ["raw_consensus", "controlled_residual", "category_only", "dino_self"]
 labels = ["Late EEG–MEG", "Controlled residual", "Category only", "Frozen-model self"]
 x = np.arange(len(targets))
@@ -163,12 +167,24 @@ def target_panel(ax, metric, ylabel, letter, title):
     ax.axhline(0, color=GREY, lw=.7, ls=(0,(3,3)))
     ax.set_xticks(x, labels, rotation=18, ha="right")
     ax.set_ylabel(ylabel)
+    values = []
+    for t in targets:
+        for meas in ("eeg", "meg"):
+            d = base["target_baselines"][t][f"heldout_{meas}_{metric}"]
+            values.extend([d["bootstrap_mean_95ci"][0], d["bootstrap_mean_95ci"][1]])
+    lo_lim = min(0.0, float(np.min(values)))
+    hi_lim = max(0.0, float(np.max(values)))
+    pad = max(0.002, 0.10 * (hi_lim - lo_lim))
+    ax.set_ylim(lo_lim - pad, hi_lim + pad)
     panel(ax, letter, title)
     strip(ax)
 
 target_panel(fig.add_subplot(gs[0,0]), "gain", "Held-out alignment gain, $\\Delta\\rho$", "a", "Matched target baselines")
 target_panel(fig.add_subplot(gs[0,1]), "unique_movement", "Unique neural movement, $r$", "b", "Image-specific adapter movement")
-fig.axes[0].legend(frameon=False, ncol=2, loc="upper right")
+handles, legend_labels = fig.axes[0].get_legend_handles_labels()
+fig.legend(handles[:2], legend_labels[:2], frameon=False, ncol=2,
+           loc="upper center", bbox_to_anchor=(0.51, 0.965),
+           fontsize=7.0, handletextpad=0.4, columnspacing=1.1)
 
 ax = fig.add_subplot(gs[1,0])
 perm_npz = np.load(PERM_NPZ)

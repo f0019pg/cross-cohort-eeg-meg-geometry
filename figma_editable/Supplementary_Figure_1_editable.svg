@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="491.215748pt" height="281.052671pt" viewBox="0 0 491.215748 281.052671" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-10T19:14:01.280457</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 281.052671 
+L 491.215748 281.052671 
+L 491.215748 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 121.265858 61.671506 
+L 272.42674 61.671506 
+L 272.42674 39.363411 
+L 121.265858 39.363411 
+z
+" clip-path="url(#p947302f8c3)" style="fill: #ffffff; stroke: #d7dadd; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 121.265858 61.671506 
+L 127.117247 61.671506 
+L 127.117247 39.363411 
+L 121.265858 39.363411 
+z
+" clip-path="url(#p947302f8c3)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 121.265858 94.546592 
+L 272.42674 94.546592 
+L 272.42674 72.238498 
+L 121.265858 72.238498 
+z
+" clip-path="url(#p947302f8c3)" style="fill: #ffffff; stroke: #d7dadd; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 121.265858 94.546592 
+L 127.117247 94.546592 
+L 127.117247 72.238498 
+L 121.265858 72.238498 
+z
+" clip-path="url(#p947302f8c3)" style="fill: #785ef0"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 300.250361 66.955002 
+Q 318.753897 66.955002 336.251203 66.955002 
+" clip-path="url(#p947302f8c3)" style="fill: none; stroke: #6f7378; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 333.051203 65.355002 
+L 336.251203 66.955002 
+L 333.051203 68.555002 
+z
+" clip-path="url(#p947302f8c3)" style="fill: #6f7378; stroke: #6f7378; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 343.131024 86.327821 
+L 462.596882 86.327821 
+L 462.596882 47.582183 
+L 343.131024 47.582183 
+z
+" clip-path="url(#p947302f8c3)" style="fill: #f4f5f6; stroke: #aeb3b8; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 289.493291 50.517459 
+L 299.245606 50.517459 
+" clip-path="url(#p947302f8c3)" style="fill: none; stroke: #6f7378; stroke-width: 0.9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 289.493291 83.392545 
+L 299.245606 83.392545 
+" clip-path="url(#p947302f8c3)" style="fill: none; stroke: #6f7378; stroke-width: 0.9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 299.245606 83.392545 
+L 299.245606 50.517459 
+" clip-path="url(#p947302f8c3)" style="fill: none; stroke: #6f7378; stroke-width: 0.9; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="1.8" y="9.080273" transform="rotate(-0 1.8 9.080273)">a</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9.2px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="18.866551" y="9.248453" transform="rotate(-0 18.866551 9.248453)">Source cohorts and construction of the neural target</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7.2px; font-family: 'Arial'; text-anchor: start; fill: #6f7378" x="28.618866" y="43.574913" transform="rotate(-0 28.618866 43.574913)">Shared stimulus set</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 8.4px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="28.618866" y="61.497031" transform="rotate(-0 28.618866 61.497031)">72 photographs</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: start; fill: #6f7378" x="28.618866" y="77.572284" transform="rotate(-0 28.618866 77.572284)">6 categories</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="134.431483" y="49.464638" transform="rotate(-0 134.431483 49.464638)">Kaneshiro</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Arial'; text-anchor: end; fill: #009e73" x="263.649657" y="49.283485" transform="rotate(-0 263.649657 49.283485)">EEG   n = 10</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.8px; font-family: 'Arial'; text-anchor: start; fill: #6f7378" x="134.431483" y="57.854248" transform="rotate(-0 134.431483 57.854248)">late RDM, 192–320 ms</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="134.431483" y="82.339646" transform="rotate(-0 134.431483 82.339646)">Cichy</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Arial'; text-anchor: end; fill: #785ef0" x="263.649657" y="82.158572" transform="rotate(-0 263.649657 82.158572)">MEG   n = 16</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 6.8px; font-family: 'Arial'; text-anchor: start; fill: #6f7378" x="134.431483" y="90.729334" transform="rotate(-0 134.431483 90.729334)">late RDM, 180–300 ms</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.7px; font-family: 'Arial'; text-anchor: middle; fill: #6f7378" x="196.846299" y="109.195692" transform="rotate(-0 196.846299 109.195692)">independent participant cohorts</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 8.3px; font-family: 'Arial'; text-anchor: middle; fill: #202124" x="402.863953" y="62.645264" transform="rotate(-0 402.863953 62.645264)">combined late neural target</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 6.9px; font-family: 'Arial'; text-anchor: middle; fill: #6f7378" x="402.863953" y="76.372296" transform="rotate(-0 402.863953 76.372296)">equal EEG and MEG weight</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_8">
+    <path d="M 196.846299 194.90212 
+L 294.369449 194.90212 
+L 294.369449 173.211978 
+L 196.846299 173.211978 
+z
+" clip-path="url(#p8f03746151)" style="fill: #f4f5f6; stroke: #aeb3b8; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 33.495024 267.202592 
+L 243.169795 267.202592 
+L 243.169795 208.157207 
+L 33.495024 208.157207 
+z
+" clip-path="url(#p8f03746151)" style="fill: #ffffff; stroke: #d7dadd; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 45.685417 229.485846 
+L 51.536806 229.485846 
+L 51.536806 226.111824 
+L 45.685417 226.111824 
+z
+" clip-path="url(#p8f03746151)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 45.685417 241.535925 
+L 51.536806 241.535925 
+L 51.536806 238.161903 
+L 45.685417 238.161903 
+z
+" clip-path="url(#p8f03746151)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 45.685417 253.586003 
+L 51.536806 253.586003 
+L 51.536806 250.211981 
+L 45.685417 250.211981 
+z
+" clip-path="url(#p8f03746151)" style="fill: #55585c"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 272.42674 267.202592 
+L 467.473039 267.202592 
+L 467.473039 208.157207 
+L 272.42674 208.157207 
+z
+" clip-path="url(#p8f03746151)" style="fill: #ffffff; stroke: #d7dadd; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 284.617134 231.895862 
+L 290.468523 231.895862 
+L 290.468523 228.52184 
+L 284.617134 228.52184 
+z
+" clip-path="url(#p8f03746151)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 284.617134 246.355956 
+L 290.468523 246.355956 
+L 290.468523 242.981934 
+L 284.617134 242.981934 
+z
+" clip-path="url(#p8f03746151)" style="fill: #785ef0"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 234.863155 195.031196 
+Q 189.532342 200.927123 145.199355 206.693268 
+" clip-path="url(#p8f03746151)" style="fill: none; stroke: #6f7378; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 148.578992 207.867174 
+L 145.199355 206.693268 
+L 148.166262 204.693902 
+z
+" clip-path="url(#p8f03746151)" style="fill: #6f7378; stroke: #6f7378; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 256.356164 195.009132 
+Q 311.43703 200.92727 365.517424 206.737913 
+" clip-path="url(#p8f03746151)" style="fill: none; stroke: #6f7378; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 362.506664 204.805214 
+L 365.517424 206.737913 
+L 362.164809 207.986902 
+z
+" clip-path="url(#p8f03746151)" style="fill: #6f7378; stroke: #6f7378; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 45.685417 232.980369 
+L 230.979402 232.980369 
+" clip-path="url(#p8f03746151)" style="fill: none; stroke: #d7dadd; stroke-width: 0.6"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 45.685417 245.030448 
+L 230.979402 245.030448 
+" clip-path="url(#p8f03746151)" style="fill: none; stroke: #d7dadd; stroke-width: 0.6"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 45.685417 257.080526 
+L 230.979402 257.080526 
+" clip-path="url(#p8f03746151)" style="fill: none; stroke: #d7dadd; stroke-width: 0.6"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 284.617134 235.390385 
+L 455.282646 235.390385 
+" clip-path="url(#p8f03746151)" style="fill: none; stroke: #d7dadd; stroke-width: 0.6"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 284.617134 249.850479 
+L 455.282646 249.850479 
+" clip-path="url(#p8f03746151)" style="fill: none; stroke: #d7dadd; stroke-width: 0.6"/>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="1.8" y="154.237376" transform="rotate(-0 1.8 154.237376)">b</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9.2px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="18.866551" y="154.405735" transform="rotate(-0 18.866551 154.405735)">Independent evaluation datasets</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.1px; font-family: 'Arial'; text-anchor: middle; fill: #6f7378" x="245.607874" y="183.484436" transform="rotate(-0 245.607874 183.484436)">source-trained</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial'; text-anchor: middle; fill: #202124" x="245.607874" y="190.947393" transform="rotate(-0 245.607874 190.947393)">fixed adapters</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 8.1px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="45.685417" y="218.688453" transform="rotate(-0 45.685417 218.688453)">Unseen THINGS concepts</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 6.9px; font-family: 'Arial'; text-anchor: end; fill: #6f7378" x="230.979402" y="218.377906" transform="rotate(-0 230.979402 218.377906)">183 concepts</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 7.2px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="56.90058" y="229.662116" transform="rotate(-0 56.90058 229.662116)">THINGS-EEG2</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: end; fill: #6f7378" x="230.979402" y="229.610358" transform="rotate(-0 230.979402 229.610358)">EEG   n = 8</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 7.2px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="56.90058" y="241.712125" transform="rotate(-0 56.90058 241.712125)">Alljoined</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: end; fill: #6f7378" x="230.979402" y="241.660437" transform="rotate(-0 230.979402 241.660437)">EEG   n = 20</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 7.2px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="56.90058" y="253.762274" transform="rotate(-0 56.90058 253.762274)">SPoSE</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: end; fill: #6f7378" x="230.979402" y="253.710447" transform="rotate(-0 230.979402 253.710447)">human judgements</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 6.2px; font-family: 'Arial'; text-anchor: start; fill: #6f7378" x="45.685417" y="264.589496" transform="rotate(-0 45.685417 264.589496)">separate photographs and EEG trial partitions</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 8.1px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="284.617134" y="218.688374" transform="rotate(-0 284.617134 218.688374)">ImageNet transfer</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 6.9px; font-family: 'Arial'; text-anchor: end; fill: #6f7378" x="455.282646" y="218.377906" transform="rotate(-0 455.282646 218.377906)">1,000 classes</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 7.2px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="295.832296" y="232.074171" transform="rotate(-0 295.832296 232.074171)">NOD-EEG</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: end; fill: #6f7378" x="455.282646" y="232.020374" transform="rotate(-0 455.282646 232.020374)">EEG</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 7.2px; font-family: 'Arial'; text-anchor: start; fill: #202124" x="295.832296" y="246.534265" transform="rotate(-0 295.832296 246.534265)">NOD-MEG</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 7px; font-family: 'Arial'; text-anchor: end; fill: #6f7378" x="455.282646" y="246.480469" transform="rotate(-0 455.282646 246.480469)">MEG</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 6.2px; font-family: 'Arial'; text-anchor: start; fill: #6f7378" x="284.617134" y="259.166961" transform="rotate(-0 284.617134 259.166961)">same 19 participants and matched photographs</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 6.2px; font-family: 'Arial'; text-anchor: start; fill: #6f7378" x="284.617134" y="265.193817" transform="rotate(-0 284.617134 265.193817)">paired EEG–MEG comparison: DINOv3</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p947302f8c3">
+   <rect x="1.8" y="13.532986" width="487.615748" height="117.411024"/>
+  </clipPath>
+  <clipPath id="p8f03746151">
+   <rect x="1.8" y="158.751884" width="487.615748" height="120.500787"/>
+  </clipPath>
+ </defs>
+</svg>
