@@ -12,6 +12,7 @@ analysis/
   adaptation/     frozen-backbone adapter analyses and target specificity
   external/       THINGS, Alljoined and paired NOD evaluations
   robustness/     control models, resampling and stability analyses
+  reporting/      manuscript tables and runtime reporting
   _shared/        shared RDM, adapter and statistical functions
 config/           figure style, path template and dated analysis protocols
 figures/          main and supplementary figure-generation scripts
@@ -46,7 +47,7 @@ The six representative Kaneshiro stimulus thumbnails included for Fig. 1 are red
 
 ## Environment
 
-Python 3.11 was used for the public release. Create an environment and install the declared dependencies:
+Python 3.12.13 was used for the final reproducibility checks. Create an environment and install the declared dependencies:
 
 ```bash
 python -m venv .venv
@@ -83,6 +84,10 @@ python analysis/adaptation/run_single_measurement_ablation.py
 python analysis/adaptation/run_target_specificity_permutation.py
 python analysis/external/run_external_things_nod.py
 python analysis/external/run_paired_nod_eeg_meg.py
+python analysis/robustness/run_adapter_architecture_baselines.py --eeg-dir <KANESHIRO_DIR> --meg-file <CICHY_RDM_FILE>
+python analysis/external/run_nod_directional_retraining.py --cache-dir <PAIRED_NOD_CACHE> --features <NOD_DINOV3_FEATURES> --index <NOD_FEATURE_INDEX>
+python analysis/reporting/build_heldout_alignment_table.py
+python analysis/reporting/benchmark_adapter_runtime.py
 ```
 
 These analyses require the public raw or preprocessed datasets at the paths declared in the environment. Dated protocol files in `config/protocols/` record the fixed windows, participant and image splits, random seeds, controls and decision rules. Newly generated results are written below `derived/` and do not overwrite the committed `results/reported/` audit records.
@@ -93,6 +98,8 @@ These analyses require the public raw or preprocessed datasets at the paths decl
 - The Kaneshiro–Cichy mapping is fixed in `source_data/supplementary/stimulus_mapping.csv` and includes image hashes without personal file paths.
 - Adapter checkpoints in `source_data/checkpoints/` correspond to the three reported DINOv3 optimization seeds.
 - `results/reported/` contains the exact continuous effect estimates, confidence intervals, participant counts and null results used in the manuscript.
+- `source_data/model_features/FEATURE_MANIFEST.json` records checkpoint identifiers, revisions, preprocessing and feature-file hashes for all three frozen backbones.
+- The adapter-architecture and NOD-directional analyses are explicitly post-hoc; their dated protocols and protocol hashes are retained in `config/protocols/` and `results/reported/`.
 - The manuscript should be treated as the authoritative description of the scientific design; the repository is its executable and numerical companion.
 
 ## Citation

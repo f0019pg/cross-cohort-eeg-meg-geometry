@@ -1,0 +1,62 @@
+{
+  "purpose": "Wall-clock benchmark using the reported architecture, 48-image training fold and optimization schedule",
+  "note": "A fixed synthetic target was used because target values do not change the computational graph.",
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.4.4",
+    "scipy": "1.18.0",
+    "pytorch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "cpu": "AMD Ryzen 9 7900X 12-Core Processor"
+  },
+  "models": [
+    {
+      "model": "DINOv3",
+      "width": 384,
+      "bottleneck": 64,
+      "train_images": 48,
+      "epochs": 400,
+      "repeats": 3,
+      "seconds": [
+        1.5193914000410587,
+        1.5406553000211716,
+        1.5598057000897825
+      ],
+      "mean_seconds": 1.539950800050671,
+      "sd_seconds": 0.02021635853123396
+    },
+    {
+      "model": "CLIP-B32",
+      "width": 512,
+      "bottleneck": 48,
+      "train_images": 48,
+      "epochs": 400,
+      "repeats": 3,
+      "seconds": [
+        1.5458198001142591,
+        1.4940490999724716,
+        1.5737081998959184
+      ],
+      "mean_seconds": 1.5378590333275497,
+      "sd_seconds": 0.04042181844038813
+    },
+    {
+      "model": "SigLIP-base",
+      "width": 768,
+      "bottleneck": 32,
+      "train_images": 48,
+      "epochs": 400,
+      "repeats": 3,
+      "seconds": [
+        1.5913787998724729,
+        1.5079938999842852,
+        1.6387151000089943
+      ],
+      "mean_seconds": 1.5793625999552507,
+      "sd_seconds": 0.06618383359486656
+    }
+  ],
+  "mean_seconds_across_models": 1.552390811111157
+}

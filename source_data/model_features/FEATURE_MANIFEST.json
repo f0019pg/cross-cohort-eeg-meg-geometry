@@ -1,0 +1,42 @@
+{
+  "created": "2026-07-23",
+  "source_stimulus_sha256": "8d94dc42e90eb2d101679a569368ed2e8d6430a02aab3361f74f1ccc64fb48ab",
+  "models": {
+    "DINOv3": {
+      "checkpoint": "timm/vit_small_patch16_dinov3.lvd1689m",
+      "output": "final-block mean-pooled spatial-patch representation",
+      "input_size": [256, 256],
+      "interpolation": "bicubic",
+      "crop": "center, crop_pct=1.0",
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225],
+      "feature_file": "features_dinov3_92x384.npy",
+      "feature_sha256": "f3ae3a4706da730bcfee59a74894e2a658aa61885f6cf12a214a133e7b3b9e70"
+    },
+    "CLIP": {
+      "checkpoint": "openai/clip-vit-base-patch32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "output": "final pooled vision output after visual projection",
+      "input_size": [224, 224],
+      "resize": "shortest edge 224",
+      "crop": "center 224x224",
+      "interpolation": "bicubic",
+      "mean": [0.48145466, 0.4578275, 0.40821073],
+      "std": [0.26862954, 0.26130258, 0.27577711],
+      "feature_file": "features_clip_b32_image_92.npy",
+      "feature_sha256": "bf48ef14df6a86738e1839a2247e3442b944c2ae64a39ae98739601a15cae530"
+    },
+    "SigLIP": {
+      "checkpoint": "google/siglip-base-patch16-224",
+      "revision": "7fd15f0689c79d79e38b1c2e2e2370a7bf2761ed",
+      "output": "final learned pooled vision output",
+      "input_size": [224, 224],
+      "interpolation": "bicubic",
+      "mean": [0.5, 0.5, 0.5],
+      "std": [0.5, 0.5, 0.5],
+      "feature_file": "features_siglip_base_image_92.npy",
+      "feature_sha256": "217f071b81d840a6243a1b0842ccd9976e4c7c7b75070db28e7e53759f5b43bb"
+    }
+  },
+  "extraction_script_sha256": "200a3a912a60e08ca6aa1fc2e44f728c01ff615bb3e67839c02f66f55b5d6940"
+}

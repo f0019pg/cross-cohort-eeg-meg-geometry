@@ -13,6 +13,7 @@ from scipy.stats import gaussian_kde
 
 REPO = Path(__file__).resolve().parents[1]
 RESULTS = REPO / "results" / "reported" / "multibackbone_adaptation.json"
+SINGLE_TARGETS = REPO / "results" / "reported" / "single_measurement_ablation.json"
 OUT = REPO / "generated_figures"
 
 EEG = "#009E73"
@@ -79,16 +80,20 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     with RESULTS.open(encoding="utf-8-sig") as f:
         results = json.load(f)
+    with SINGLE_TARGETS.open(encoding="utf-8-sig") as f:
+        single_targets = json.load(f)
 
     mpl.rcParams.update(
         {
             "font.family": "Arial",
+            "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
             "font.size": 7.5,
             "axes.labelsize": 8,
             "xtick.labelsize": 7,
             "ytick.labelsize": 7,
             "pdf.fonttype": 42,
             "ps.fonttype": 42,
+            "svg.fonttype": "none",
         }
     )
 
@@ -102,9 +107,19 @@ def main() -> None:
     adjusted_p = benjamini_hochberg(raw_p)
 
     fig = plt.figure(figsize=(7.15, 3.35), facecolor="white")
-    grid = fig.add_gridspec(1, 2, width_ratios=[1.7, 0.9], left=0.085, right=0.985, bottom=0.17, top=0.84, wspace=0.35)
+    grid = fig.add_gridspec(
+        1,
+        3,
+        width_ratios=[1.35, 0.72, 1.0],
+        left=0.08,
+        right=0.985,
+        bottom=0.18,
+        top=0.82,
+        wspace=0.42,
+    )
     ax_a = fig.add_subplot(grid[0, 0])
     ax_b = fig.add_subplot(grid[0, 1])
+    ax_c = fig.add_subplot(grid[0, 2])
     rng = np.random.default_rng(20260810)
 
     ax_a.set_xlim(-0.012, 0.094)
@@ -142,12 +157,59 @@ def main() -> None:
     ax_b.set_xlabel("Correlation with residual\nneural geometry, r")
     style_axis(ax_b)
 
+    teacher_order = [
+        ("eeg_only", "EEG only"),
+        ("meg_only", "MEG only"),
+        ("consensus", "EEG + MEG"),
+    ]
+    offsets = {"eeg": -0.12, "meg": 0.12}
+    markers = {"eeg": "o", "meg": "s"}
+    for measurement, label, color in measurements:
+        for teacher_index, (teacher_key, _) in enumerate(teacher_order):
+            metric = single_targets["teacher_summaries"][teacher_key][measurement]
+            values = np.asarray(metric["values"], dtype=float)
+            x = teacher_index + offsets[measurement]
+            jitter = rng.uniform(-0.065, 0.065, size=len(values))
+            ax_c.scatter(
+                np.full(len(values), x) + jitter,
+                values,
+                s=9,
+                color=color,
+                alpha=0.48,
+                linewidth=0,
+                zorder=2,
+            )
+            ci = metric["bootstrap_mean_95ci"]
+            ax_c.vlines(x, ci[0], ci[1], color=INK, lw=1.05, zorder=3)
+            ax_c.hlines([ci[0], ci[1]], x - 0.045, x + 0.045, color=INK, lw=0.7, zorder=3)
+            ax_c.scatter(
+                x,
+                metric["mean"],
+                s=31,
+                marker=markers[measurement],
+                facecolor=color,
+                edgecolor=INK,
+                linewidth=0.65,
+                zorder=4,
+                label=label if teacher_index == 0 else None,
+            )
+    ax_c.axhline(0, color=ZERO, lw=0.7, ls=(0, (2.5, 2.5)))
+    ax_c.set_xlim(-0.5, 2.5)
+    ax_c.set_ylim(-0.026, 0.063)
+    ax_c.set_xticks(range(3), [label.replace(" ", "\n") for _, label in teacher_order])
+    ax_c.set_ylabel(r"Held-out alignment gain, $\Delta\rho$")
+    ax_c.legend(frameon=False, loc="upper right", fontsize=6.7, handletextpad=0.35, borderaxespad=0.1)
+    style_axis(ax_c)
+
     pos_a = ax_a.get_position()
     pos_b = ax_b.get_position()
+    pos_c = ax_c.get_position()
     fig.text(pos_a.x0 - 0.045, 0.95, "a", fontsize=10, fontweight="bold", ha="left", va="top")
     fig.text(pos_a.x0, 0.95, "Held-out neural-alignment gain", fontsize=8.5, ha="left", va="top")
     fig.text(pos_b.x0 - 0.045, 0.95, "b", fontsize=10, fontweight="bold", ha="left", va="top")
     fig.text(pos_b.x0, 0.95, "Adapter displacement", fontsize=8.5, ha="left", va="top")
+    fig.text(pos_c.x0 - 0.045, 0.95, "c", fontsize=10, fontweight="bold", ha="left", va="top")
+    fig.text(pos_c.x0, 0.95, "Neural-target comparison", fontsize=8.5, ha="left", va="top")
 
     stem = OUT / "Figure_5_adapter_alignment"
     fig.savefig(stem.with_suffix(".png"), dpi=600, facecolor="white")
