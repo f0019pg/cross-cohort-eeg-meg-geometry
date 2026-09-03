@@ -55,6 +55,11 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 python -m pip install -r requirements.txt
 ```
 
+The exact package versions used for the final checks are recorded in
+`requirements-reproducibility.txt`. The PyTorch build listed there uses CUDA
+12.8 and may require the corresponding PyTorch package index when recreating
+the environment.
+
 Copy `config/paths.example.env` to a local, untracked file or define the variables in your shell. Absolute local paths are deliberately excluded from tracked files.
 
 ## Regenerate the figures
